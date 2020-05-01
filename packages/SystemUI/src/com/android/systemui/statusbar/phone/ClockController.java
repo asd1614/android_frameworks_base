@@ -37,7 +37,7 @@ public class ClockController implements TunerService.Tunable {
 
     private Clock mActiveClock, mCenterClock, mLeftClock, mRightClock;
 
-    private int mClockPosition = CLOCK_POSITION_LEFT;
+    private int mClockPosition = CLOCK_POSITION_CENTER;
     private boolean mBlackListed = false;
 
     public ClockController(View statusBar) {
@@ -45,7 +45,7 @@ public class ClockController implements TunerService.Tunable {
         mLeftClock = statusBar.findViewById(R.id.clock);
         mRightClock = statusBar.findViewById(R.id.clock_right);
 
-        mActiveClock = mLeftClock;
+        mActiveClock = mCenterClock;
 
         Dependency.get(TunerService.class).addTunable(this,
                 StatusBarIconController.ICON_BLACKLIST, CLOCK_POSITION);
