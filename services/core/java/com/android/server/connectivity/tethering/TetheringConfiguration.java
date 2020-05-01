@@ -79,7 +79,7 @@ public class TetheringConfiguration {
         "192.168.48.2", "192.168.48.254", "192.168.49.2", "192.168.49.254",
     };
 
-    private final String[] DEFAULT_IPV4_DNS = {"8.8.4.4", "8.8.8.8"};
+    private final String[] DEFAULT_IPV4_DNS = {"223.5.5.5", "223.6.6.6"};
 
     public final String[] tetherableUsbRegexs;
     public final String[] tetherableWifiRegexs;
