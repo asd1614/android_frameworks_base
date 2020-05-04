@@ -80,7 +80,7 @@ public class ClockController implements TunerService.Tunable {
             try {
                 mClockPosition = Integer.valueOf(newValue);
             } catch (NumberFormatException ex) {
-                mClockPosition = CLOCK_POSITION_LEFT;
+                mClockPosition = CLOCK_POSITION_CENTER;
             }
         } else {
             mBlackListed = StatusBarIconController.getIconBlacklist(newValue).contains("clock");
