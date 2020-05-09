@@ -191,7 +191,7 @@ public class RadioAccessFamily implements Parcelable {
             case RILConstants.NETWORK_MODE_LTE_CDMA_EVDO_GSM_WCDMA:
                 return LTE | CDMA | EVDO | GSM | WCDMA;
             case RILConstants.NETWORK_MODE_LTE_ONLY:
-                return LTE;
+                return LTE | GSM;
             case RILConstants.NETWORK_MODE_LTE_WCDMA:
                 return LTE | WCDMA;
             case RILConstants.NETWORK_MODE_CDMA_NO_EVDO:
@@ -300,7 +300,7 @@ public class RadioAccessFamily implements Parcelable {
                 return RILConstants.NETWORK_MODE_LTE_GSM_WCDMA;
             case (LTE | CDMA | EVDO | GSM | WCDMA):
                 return RILConstants.NETWORK_MODE_LTE_CDMA_EVDO_GSM_WCDMA;
-            case LTE:
+            case (LTE | GSM):
                 return RILConstants.NETWORK_MODE_LTE_ONLY;
             case (LTE | WCDMA):
                 return RILConstants.NETWORK_MODE_LTE_WCDMA;
